@@ -50,7 +50,7 @@ public final class Customer implements Serializable {
         int age = 0;
         age = LocalDateTime.now().getYear()-birthDate.getYear();
         if(LocalDateTime.now().getDayOfYear() < birthDate.getDayOfYear())  {
-            age-=1;
+            age--;
         }
         return age;
     }
